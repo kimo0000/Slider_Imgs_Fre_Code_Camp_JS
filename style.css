@@ -1,0 +1,79 @@
+*, ::after, ::before {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 482px;
+    height: 220px;
+}
+
+.container .images {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    scroll-behavior: smooth;
+    border: 3px solid blueviolet;
+    position: relative;
+    overflow: hidden;
+}
+
+.container .images .img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .3s;
+}
+
+.images .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container .icons {
+    width: 100%;
+    padding: 5px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.icons button {
+    padding: 5px 8px;
+    border-radius: 8px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.icons .prev_btn.hide,
+.icons .next_btn.hide {
+    display: none;
+}
+
+.icons button:hover {
+    background-color: #f50;
+    color: #fff;
+}
